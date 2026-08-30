@@ -1,5 +1,5 @@
 # RedCmd
-常用的渗透测试命令生成 reverse shell 内网渗透下载命令等
+常用的渗透测试命令生成器：反弹 Shell、内网渗透下载命令等。
 因为常用的命令太多了，记也懒得记，虽然有网页版的但是也懒得打开浏览器，不如命令行来的优雅，
 就自己手敲了一个 代码非常简单，后续会增加命令。
 
@@ -8,8 +8,17 @@
 
 ## 使用方法
 ``` bash
-go run redcmd.go -h
+go run redcmd.go revshell 127.0.0.1 4444
 ```
+
+安装为本地命令：
+
+```bash
+go install github.com/sspsec/RedCmd@latest
+redcmd msfshell 127.0.0.1 4444
+```
+
+仅在已获授权的测试环境中使用生成的命令。文件名、主机和端口请视为不可信输入，执行前务必人工检查。
 
 生成下载命令
 ``` bash
@@ -23,7 +32,7 @@ go run redcmd.go revshell 10.10.10.10 4444
 ```
 <img width="903" alt="image" src="https://github.com/sspsec/RedCmd/assets/142762749/fcbf1273-0641-48e9-9dcc-4c8f7330dd61">
 
-生成meterperter shell的命令
+生成 Meterpreter shell 的命令
 ``` bash
 go run redcmd.go msfshell 10.10.10.10 4444
 ```
